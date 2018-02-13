@@ -1,1 +1,11 @@
-
+use_bpm 120
+use_synth :saw
+nbc_notes= [:c2, :e2, :g2, :b2, :c3, :b2, :g2, :e2]
+live_loop :st do
+  index= 0
+  8.times do
+    play nbc_notes[index]
+    sleep 0.5
+    index = index + 1
+  end
+end
