@@ -1,0 +1,14 @@
+#song 2
+#mi gente
+use_bpm 99
+use_synth :piano
+live_loop :migente do
+  gente_notes=[:E4, :G4, :B4, :F4, :F4, :E4, :G4, :B4, :F4, :F4, :E4, :G4, :B4, :F4, :F4,:E4,:G4,:B4,:F4, :F4,]
+  gente_sleeps=[1,0.5,0.5,1,1,1,0.5,1,1,1,0.5,0.5,1,1,1,0.5,0.5,1,1]
+  index=0
+  22.times do
+    play gente_notes[index]
+    sleep gente_sleeps[index]
+    index=index +1
+  end
+end
