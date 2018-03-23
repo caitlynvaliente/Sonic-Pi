@@ -1,0 +1,33 @@
+# Welcome to Sonic Pi v2.11.
+# This is poco Loco
+# music scheet: https://www.sheetmusicdirect.us/sheetmusic/song/1000299401/un-poco-loco
+
+#Coco is my sample name and it plays before you hear the song
+coco = "C:/Users/caitlyn_valiente/Desktop/coco2.wav"
+use_bpm 199
+use_synth :piano
+sample coco
+sleep 18
+live_loop :pocoloco do
+  pl_notes=[ :B3, :D4, :G4, :B3, :D4, :G4, :r, :G3, :B3, :D4,  :D4 , :G4, :Fs4,  :D4, :Fs4, :E4, :C4, :E4, :D4, :D4, :Fs4,:E4, :C4, :E4, :D4, :r, :r,:F3, :G3,:C4, :C4,:r,:G3, :C4, :C4,:D4, :C4, :D4, :C4, :C4, :C4, :D4, :D4, :Fs4, :Fs4, :E4, :D4, :D4, :C4, :C4, :D4, :C4, :C4, :C4, :C4, :r, :B2, :Fs4, :Fs4, :E4, :E4, :D4, :D4, :C4, :C4, :D4, :C4, :D4, :D4, :D4, :r, :B2, :Fs4, :Fs4, :E4, :E4]
+  pl_sleeps=[0,0,3,0,0,3,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.25,0.25,0.5,0.5,1,0.5,0.5,1,1,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,1.5,0.5,0.5,0.5,1.5,0.5,0.5,0.5,1.5,0.5,1,0.5,1,0.5,1]
+  index=0
+  72. times do
+    play pl_notes[index]
+    sleep pl_sleeps[index]
+    index=index +1
+  end
+end
+
+use_bpm 199
+use_synth :piano
+live_loop :baseloco do
+  base_notes=[:G2, :D3, :G3, :G2, :D3, :G3, :D3, :r, :r, :r, :D3, :A3, :r, :r, :C3, :G3, :r, :r, :G2, :D3, :r, :D3, :r, :D3, :F3, :r, :G2, :D3, :D3, :A3, :G2, :D3, :G3, :D3, :A3, :G2, :D3, :G3, :D3, :A3]
+  base_sleeps=[0,0,3,0,0,3,0.5,0.5,0.5,1.5,0,0.5,0.5,0.5,0,0.5,0.5,0.5,0,0.5,0.5,0.5,1.5,0,1.5,1.5,0,3,0,3,0,0,3,0,3,0,0,3,0,3,]
+  index=0
+  36.times do
+    play base_notes[index]
+    sleep base_sleeps[index]
+    index=index +1
+  end
+end
