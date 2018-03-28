@@ -1,5 +1,6 @@
 #song 2
 #mi gente
+#this is the first part of the song that is geing played at the sametime as song one
 use_bpm 99
 use_synth :piano
 live_loop :migente do
